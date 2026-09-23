@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-23T17:45:48+00:00",
+  "errors": [],
+  "images": [
+    {
+      "name": "alpine",
+      "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "upstream_digest": "sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6",
+      "version": "3.24.2"
+    }
+  ],
+  "month": "2026-09"
+}
