@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=../.github/subscription.schema.json
+# Example only. Change the template, then enable this subscription to publish it.
+enabled: true
+upstream: docker.io/library/alpine
+tag_regex: '^\d+\.\d+\.\d+$'
+sort: semver
+platforms:
+  - linux/amd64
+  - linux/arm64

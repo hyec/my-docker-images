@@ -1,0 +1,4 @@
+FROM docker.io/library/alpine:${latest}
+
+# Add your Alpine extensions here before enabling the subscription.
+RUN apk add --no-cache vim
