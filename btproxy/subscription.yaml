@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=../.github/subscription.schema.json
+enabled: true
+upstream: docker.io/library/alpine
+tag_regex: '^\d+\.\d+\.\d+$'
+sort: semver
+platforms:
+  - linux/amd64
+  - linux/arm64
