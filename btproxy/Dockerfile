@@ -1,0 +1,37 @@
+# Generated from Dockerfile.template; edit the template instead.
+FROM docker.io/library/alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 AS build
+
+ARG BLUEZ_VERSION=5.87
+ARG BLUEZ_SHA256=26bdcf2cebd7310c6f598850606b037ef0c515fe6608ebc54d22c50c4c32b35f
+
+RUN apk add --no-cache \
+      build-base \
+      curl \
+      dbus-dev \
+      glib-dev \
+      libical-dev \
+      linux-headers \
+      pkgconf \
+      readline-dev \
+      xz
+
+WORKDIR /src
+RUN curl -fsSL "https://www.kernel.org/pub/linux/bluetooth/bluez-${BLUEZ_VERSION}.tar.xz" -o /tmp/bluez.tar.xz \
+    && echo "${BLUEZ_SHA256}  /tmp/bluez.tar.xz" | sha256sum -c - \
+    && tar -xf /tmp/bluez.tar.xz --strip-components=1 \
+    && ./configure --disable-systemd --disable-udev --disable-manpages \
+    && make -j"$(nproc)" tools/btproxy \
+    && mkdir -p /out/licenses \
+    && cp tools/btproxy /out/btproxy \
+    && cp COPYING /out/licenses/COPYING
+
+FROM docker.io/library/alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+
+RUN apk add --no-cache bluez-btmgmt
+
+COPY --from=build /out/btproxy /usr/local/bin/btproxy
+COPY --from=build /out/licenses/COPYING /usr/share/licenses/bluez/COPYING
+
+EXPOSE 45550/tcp
+ENTRYPOINT ["/usr/local/bin/btproxy"]
+CMD ["--listen=127.0.0.1", "--port=45550", "--index=0"]

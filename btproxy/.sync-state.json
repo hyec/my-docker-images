@@ -1,0 +1,10 @@
+{
+  "image_digest": "sha256:e4e18d0021ae18a7e70fcb8b97b9e4466eac2287dbc8ff92498f826c1b55fa1d",
+  "input_digest": "11bfe843fe29c983b3234a5ddeec4b8408df12257f9a2a6f625d88edd49f2f41",
+  "platforms": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "upstream_digest": "sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6",
+  "version": "3.24.2"
+}
