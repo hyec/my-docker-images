@@ -1,5 +1,5 @@
 # Generated from Dockerfile.template; edit the template instead.
-FROM docker.io/library/alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 AS build
+FROM docker.io/library/alpine:3.24.3@sha256:b3413572228e34bd1c9245f5565e6cd127005655e8a7899aef33d8e83255c9e6 AS build
 
 ARG BLUEZ_VERSION=5.87
 ARG BLUEZ_SHA256=26bdcf2cebd7310c6f598850606b037ef0c515fe6608ebc54d22c50c4c32b35f
@@ -25,7 +25,7 @@ RUN curl -fsSL "https://www.kernel.org/pub/linux/bluetooth/bluez-${BLUEZ_VERSION
     && cp tools/btproxy /out/btproxy \
     && cp COPYING /out/licenses/COPYING
 
-FROM docker.io/library/alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+FROM docker.io/library/alpine:3.24.3@sha256:b3413572228e34bd1c9245f5565e6cd127005655e8a7899aef33d8e83255c9e6
 
 RUN apk add --no-cache bluez-btmgmt
 
