@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T12:10:14+00:00",
+  "checked_at": "2026-11-09T12:57:36+00:00",
   "errors": [],
   "images": [
     {
@@ -8,7 +8,7 @@
         "linux/amd64",
         "linux/arm64"
       ],
-      "upstream_digest": "sha256:93b41ef40b1677fce8fcc64ff4af09daddfacf5040afde618bc46c1e2d1cc7d4",
+      "upstream_digest": "sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf",
       "version": "3.24.4"
     },
     {
@@ -17,7 +17,7 @@
         "linux/amd64",
         "linux/arm64"
       ],
-      "upstream_digest": "sha256:93b41ef40b1677fce8fcc64ff4af09daddfacf5040afde618bc46c1e2d1cc7d4",
+      "upstream_digest": "sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf",
       "version": "3.24.4"
     }
   ],

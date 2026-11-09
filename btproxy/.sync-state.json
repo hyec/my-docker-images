@@ -1,10 +1,10 @@
 {
-  "image_digest": "sha256:36dc5e037de650a7d4194462a45b794e237ab2a4f7c1f992bc63ebf53dd033e1",
+  "image_digest": "sha256:55dc99f76911a644a705ea4a07413ed8350ae99da6320f45b467dfddb1785279",
   "input_digest": "11bfe843fe29c983b3234a5ddeec4b8408df12257f9a2a6f625d88edd49f2f41",
   "platforms": [
     "linux/amd64",
     "linux/arm64"
   ],
-  "upstream_digest": "sha256:93b41ef40b1677fce8fcc64ff4af09daddfacf5040afde618bc46c1e2d1cc7d4",
+  "upstream_digest": "sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf",
   "version": "3.24.4"
 }
